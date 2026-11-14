@@ -17,7 +17,7 @@ Claude Code や Claude のスキル対応環境で、`skills/natural-slides/SKIL
 Claude Code の場合、ユーザー全体のスキルとして使うなら、このリポジトリを clone して中の `skills/natural-slides` を `~/.claude/skills/` にコピーする。
 
 ```bash
-git clone https://github.com/yoshitakagii/natural-slides.git
+git clone https://github.com/yoshitakagiii/natural-slides.git
 cp -r natural-slides/skills/natural-slides ~/.claude/skills/
 ```
 
