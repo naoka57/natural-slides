@@ -10,9 +10,24 @@ Claude にスライドを作らせると、どうしても「それっぽいけ�
 
 出力形式を指定しなければ、その環境で使えるスライドの仕組み（スライド型のアーティファクト、`.pptx`、HTML など）で作る。比率は16:9、1920×1080基準。
 
+PowerPoint・Canva・Googleスライドに持っていっても崩れにくいよう、組み方も決めてある。文字は見出しと段落の2種類だけで書き、円は図形、矢印はコネクタとして置く。ピルは幅と高さを数値で決めた箱の中に文字を置き、マーカーは独立した一行にする。書き出したあとでも、文字の打ち替えや図形の移動ができる。見せるだけで編集しないなら PDF が一番崩れない。詳しくは SKILL.md の「書き出しやすい構成」にある。
+
 ## 使い方
 
 Claude Code や Claude のスキル対応環境で、`skills/natural-slides/SKILL.md` を読み込める場所に置く。
+
+### claude.ai（Claude のアプリ）で使う
+
+`skills/natural-slides` フォルダを丸ごと zip にする。zip の中身は `natural-slides/SKILL.md` と `natural-slides/brand.example.md` の形になっていればいい。
+
+```bash
+git clone https://github.com/yoshitakagiii/natural-slides.git
+cd natural-slides/skills && zip -r ../../natural-slides.zip natural-slides
+```
+
+claude.ai の「カスタマイズ」から「Skills」を開き、「+追加」→「Skills をアップロード」で zip を選ぶ。新しい版に入れ替えるときも同じ手順で、「アップロードして置き換え」を選ぶ。前の版はバージョン履歴に残る。
+
+### Claude Code で使う
 
 Claude Code の場合、ユーザー全体のスキルとして使うなら、このリポジトリを clone して中の `skills/natural-slides` を `~/.claude/skills/` にコピーする。
 
