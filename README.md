@@ -25,6 +25,14 @@ cp -r natural-slides/skills/natural-slides ~/.claude/skills/
 
 置いたあとは「このサービスの営業資料を作って」「提案書のテンプレートを作って」のように頼めば、スキルの説明文にある条件に合ったときに Claude が自動で読み込む。明示的に呼びたいときは `/natural-slides` のように指定する環境もある。
 
+## 最初に使うとき
+
+初めて資料を頼むと、Claude は作り始める前に、いまの既定値を見せてブランド設定を一度だけ尋ねる。尋ねるのはメインカラー、書体、ロゴ、会社名・サービス名、主な出力先（PDF・PowerPoint・Googleスライド・Canva）の5つ。「このままでいい」と答えれば、既定値（メインカラー #2F3237、Montserrat ＋ Noto Sans JP）で作る。
+
+決まった設定は、Claude Code ならスキルのフォルダに `brand.md` として保存され、次からは尋ねずにその設定で作る。claude.ai のようにスキルのフォルダに書き込めない環境では、Claude が設定の中身を渡すので、プロジェクトの指示に貼っておく。
+
+質問を飛ばしたいなら、先に `skills/natural-slides/brand.example.md` を `brand.md` という名前でコピーし、値を書き換えておけばいい。
+
 ## 文章の自然さを上げたいとき
 
 スライドに載せる文の自然さをさらに詰めたいときは、日本語の文章スキルと併用するとよい。相性がいいのは [coji/natural-japanese](https://github.com/coji/natural-japanese)（MIT）。natural-slides 単体でも動くので、必須ではない。

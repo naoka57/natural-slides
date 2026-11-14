@@ -1,1 +1,3 @@
 .DS_Store
+# Personal brand settings are created per user; ship only the example
+skills/natural-slides/brand.md
