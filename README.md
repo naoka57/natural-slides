@@ -48,6 +48,14 @@ cp -r natural-slides/skills/natural-slides ~/.claude/skills/
 
 質問を飛ばしたいなら、先に `skills/natural-slides/brand.example.md` を `brand.md` という名前でコピーし、値を書き換えておけばいい。
 
+## イラストを入れるには Canva が要る
+
+このスキルは、表紙や章扉、図のないページに、斜め上から見たフラットなビジネスイラストを大きく置く。そのイラストは Canva の画像生成で作るので、Canva のアカウントを持ち、Canva のコネクタを Claude につないでおく必要がある。つないでいれば、Claude がイラストを生成し、原寸の PNG で受け取って資料に入れるところまで自動で進める。作業用に「natural-slides 画像書き出し用」というデザインが Canva に1つ作られるが、資料ができたら消してかまわない。
+
+Canva がない場合も、スキルはそのまま動く。ただしイラストは入らない。イラストの場所にはサイズを決めた空の枠が置かれ、どんな絵が要るかが報告に並ぶ。ブランド設定、図解、言い切る文、PowerPoint や PDF への書き出しは、Canva がなくても同じように使える。空いた枠には、自分で用意した画像を入れればいい。
+
+claude.ai で使う場合は、Claude が画像を取り込むときに `export-download.canva.com` へつながる必要がある。つながらないと言われたら、claude.ai の設定で、コード実行がつながってよいドメインにこのドメインを足す。
+
 ## 文章の自然さを上げたいとき
 
 スライドに載せる文の自然さをさらに詰めたいときは、日本語の文章スキルと併用するとよい。相性がいいのは [coji/natural-japanese](https://github.com/coji/natural-japanese)（MIT）。natural-slides 単体でも動くので、必須ではない。
