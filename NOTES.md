@@ -2,7 +2,7 @@
 
 ## 書体
 
-既定では欧文・数字に Montserrat、和文に Noto Sans JP を指定している。どちらも無料で商用利用できる書体（Montserrat は SIL Open Font License、Noto Sans JP も同じ OFL）だが、配布・埋め込みの条件は各フォントのライセンス本文で確認すること。別の書体に変えたいときは、SKILL.md の「書体」の節を書き換えればよい。
+既定では欧文・数字にMontserrat、和文にNoto Sans JPを指定している。どちらも無料で商用利用できる書体（MontserratはSIL Open Font License、Noto Sans JPも同じOFL）だが、配布・埋め込みの条件は各フォントのライセンス本文で確認すること。別の書体に変えたいときは、SKILL.mdの「書体」の節を書き換えればよい。
 
 ## イラストと画像
 
@@ -10,12 +10,12 @@
 
 ## 数字と実績
 
-スキルは「渡されていない数字を勝手に作らない」「グラフは渡されたデータをそのまま使う」ことを前提にしている。生成されたスライドに `[00]` のような空欄が残っていたら、それは実データに差し替える箇所。中身の数字や事例は作り手が用意する。
+スキルは「渡されていない数字を勝手に作らない」「グラフは渡されたデータをそのまま使う」ことを前提にしている。生成されたスライドに`[00]`のような空欄が残っていたら、それは実データに差し替える箇所。中身の数字や事例は作り手が用意する。
 
 ## 併用スキル
 
-文章の自然さを詰めるための [coji/natural-japanese](https://github.com/coji/natural-japanese) は別のスキルで、このリポジトリには含まれない。使いたい場合は各自で導入する。natural-slides は単体で動く。
+文章の自然さを詰めるための[coji/natural-japanese](https://github.com/coji/natural-japanese)は別のスキルで、このリポジトリには含まれない。使いたい場合は各自で導入する。natural-slidesは単体で動く。
 
 ## 出力環境
 
-スライド型アーティファクト、`.pptx`、HTML など、環境にあるスライドの仕組みで作る。PowerPoint・Canva・Google スライドへ持っていっても文字と図形を直せるよう、HTML/CSS の組み方（文字は h1〜h3 と p だけ、円は x-shape、矢印は x-connector など）を決めてある。詳しくは SKILL.md「書き出しやすい構成」にまとめた。Montserrat と Noto Sans JP が入っていない環境で PowerPoint を開くと書体が置き換わるので、見せるだけで編集が要らないなら PDF が一番崩れない。
+スライド型アーティファクト、`.pptx`、HTMLなど、環境にあるスライドの仕組みで作る。PowerPoint・Canva・Googleスライドへ持っていっても文字と図形を直せるよう、HTML/CSSの組み方（文字はh1〜h3とpだけ、円はx-shape、矢印はx-connectorなど）を決めてある。詳しくはSKILL.md「書き出しやすい構成」にまとめた。MontserratとNoto Sans JPが入っていない環境でPowerPointを開くと書体が置き換わるので、見せるだけで編集が要らないならPDFが一番崩れない。
