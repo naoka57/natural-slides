@@ -8,6 +8,8 @@ AIが作る日本語スライドにありがちな「細い線・余白だらけ
 
 Claude にスライドを作らせると、どうしても「それっぽいけど中身の薄い」仕上がりになりやすい。このスキルは、その「AIっぽさ」の出どころを一つずつ潰していく。たとえば枠線は6〜9pxと太くする、要点は「・」ではなく円で囲んだ番号で並べる、段階を見せるときはピラミッド図を使う、タイトルに句読点を入れない、本文をです・ます調にしない、といった具合に、判断に迷いやすいところを数値とルールで固定する。
 
+見出しの下に灰色の小さな説明を添える組み方も、AIっぽさが出やすいところなので控える。カードや図の段に置く文字は見出しか一文の1つにし、断り書きはスピーカーノートに回す。小さく薄い文字は、出典や数字の時点のように、ないと困るところにだけ使う。
+
 出力形式を指定しなければ、その環境で使えるスライドの仕組み（スライド型のアーティファクト、`.pptx`、HTML など）で作る。比率は16:9、1920×1080基準。
 
 PowerPoint・Canva・Googleスライドに持っていっても崩れにくいよう、組み方も決めてある。文字は見出しと段落の2種類だけで書き、円は図形、矢印はコネクタとして置く。ピルは幅と高さを数値で決めた箱の中に文字を置き、マーカーは独立した一行にする。書き出したあとでも、文字の打ち替えや図形の移動ができる。見せるだけで編集しないなら PDF が一番崩れない。詳しくは SKILL.md の「書き出しやすい構成」にある。
@@ -16,20 +18,28 @@ PowerPoint・Canva・Googleスライドに持っていっても崩れにくい�
 
 Claude Code や Claude のスキル対応環境で、`skills/natural-slides/SKILL.md` を読み込める場所に置く。
 
-### claude.ai（Claude のアプリ）で使う
+### Claude のチャット（claude.ai・デスクトップアプリ）で使う
 
-`skills/natural-slides` フォルダを丸ごと zip にする。zip の中身は `natural-slides/SKILL.md` と `natural-slides/brand.example.md` の形になっていればいい。
+いちばん手軽なのは、チャットでこのリポジトリのリンクを渡して頼む方法。設定の「機能」で「クラウドでコードを実行」と「外部ネットワークへの通信を許可」をオンにしてから、新しいチャットで次のように送る。
+
+```text
+https://github.com/yoshitakagiii/natural-slides のスキルを使えるようにして
+```
+
+Claude がリポジトリを取ってきて「Skills を保存」のカードを出すので、「保存」を押せば入る。このやり方で保存されるのは SKILL.md 1ファイルで、brand.example.md の中身は SKILL.md の中に入る。新しい版にするときは「natural-slides を GitHub の最新版にして」と頼む。
+
+うまくいかないときは、zip をアップロードする。`skills/natural-slides` フォルダを丸ごと zip にする。zip の中身は `natural-slides/SKILL.md` と `natural-slides/brand.example.md` の形になっていればいい。
 
 ```bash
 git clone https://github.com/yoshitakagiii/natural-slides.git
 cd natural-slides/skills && zip -r ../../natural-slides.zip natural-slides
 ```
 
-claude.ai の「カスタマイズ」から「Skills」を開き、「+追加」→「Skills をアップロード」で zip を選ぶ。新しい版に入れ替えるときも同じ手順で、「アップロードして置き換え」を選ぶ。前の版はバージョン履歴に残る。
+「設定」の「Skills」を開き、「+追加」→「Skills をアップロード」で zip を選ぶ。新しい版に入れ替えるときも同じ手順で、「アップロードして置き換え」を選ぶ。前の版はバージョン履歴に残る。
 
 ### Claude Code で使う
 
-Claude Code の場合、ユーザー全体のスキルとして使うなら、このリポジトリを clone して中の `skills/natural-slides` を `~/.claude/skills/` にコピーする。
+Claude Code にも、チャットと同じ1行（「https://github.com/yoshitakagiii/natural-slides のスキルを使えるようにして」）を送れば、Claude がリポジトリを取ってきて `~/.claude/skills/` に入れる。自分で入れるなら、ユーザー全体のスキルとして使う場合は、このリポジトリを clone して中の `skills/natural-slides` を `~/.claude/skills/` にコピーする。
 
 ```bash
 git clone https://github.com/yoshitakagiii/natural-slides.git
