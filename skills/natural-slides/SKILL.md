@@ -1,6 +1,8 @@
 ---
 name: "natural-slides"
 description: "日本語のスライド資料（営業資料・提案書・会社紹介・サービス説明・セミナー資料・テンプレート）やSNS投稿用の縦長スライドを作るときに使う。AIっぽさを消し、図と太い線と言い切る文で、人が作ったような資料にする。"
+metadata:
+  version: "1.1.0"
 ---
 
 # natural-slides

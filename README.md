@@ -34,7 +34,7 @@ Claude CodeやClaudeのスキル対応環境で、`skills/natural-slides/SKILL.m
 https://github.com/yoshitakagiii/natural-slides のスキルを使えるようにして
 ```
 
-Claudeがリポジトリを取ってきて「Skillsを保存」のカードを出すので、「保存」を押せば入る。このやり方で保存されるのはSKILL.md 1ファイルで、brand.example.mdの中身はSKILL.mdの中に入る。新しい版にするときは「natural-slidesをGitHubの最新版にして」と頼む。
+Claudeがリポジトリを取ってきて「Skillsを保存」のカードを出すので、「保存」を押せば入る。このやり方で保存されるのはSKILL.md 1ファイルで、brand.example.mdの中身はSKILL.mdの中に入る。新しい版にするときは「natural-slidesをGitHubの最新版にして」と頼む。いま入っている版は「natural-slidesのバージョンを教えて」と聞けばわかる。版ごとの変更は、このページの下の「更新履歴」にまとめている。
 
 うまくいかないときは、zipをアップロードする。`skills/natural-slides`フォルダを丸ごとzipにする。zipの中身は`natural-slides/SKILL.md`と`natural-slides/brand.example.md`の形になっていればいい。
 
@@ -76,7 +76,19 @@ ClaudeのチャットでCanvaを使う場合は、Claudeが画像を取り込む
 
 ## 文章の自然さを上げたいとき
 
-スライドに載せる文の自然さをさらに詰めたいときは、日本語の文章スキルと併用するとよい。相性がいいのは[coji/natural-japanese](https://github.com/coji/natural-japanese)（MIT）。natural-slides単体でも動くので、必須ではない。
+スライドに載せる文の自然さをさらに詰めたいときは、日本語の文章スキルと併用するとよい。natural-slidesは[AnIT012/nihongo](https://github.com/AnIT012/nihongo)（MIT）を主に使い、[coji/natural-japanese](https://github.com/coji/natural-japanese)（MIT）を補助に回す。ルールがぶつかったときはnihongoに従う。どちらも入っていなくてもnatural-slidesは動くので、必須ではない。
+
+## 更新履歴
+
+### v1.1.0（2026年11月22日）
+
+資料の種類を最初に決めるようにした。営業資料、会社紹介・採用、社内の報告・決裁、セミナー・講演の4つで、大きな数字や一文だけのページをどこまで使うかが変わる。ページは強・中・静の3段階に分け、山場の「強」は10枚に2〜3枚までで、続けて置かない。作り始める前にページごとの構成案を書き出して見せ、仕上げには全ページを画像にして1枚ずつと通しで見直す。
+
+あわせて、SNS投稿用の縦長スライドの作り方を足した。文章はnihongoを主に、natural-japaneseを補助にして書く。Canvaで生成したイラストを、Chromeを通して受け取る手順も加えた。
+
+### v1.0.0（2026年11月17日）
+
+X記事で紹介した最初の公開版。
 
 ## ライセンス
 
